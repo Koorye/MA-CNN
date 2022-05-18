@@ -3,7 +3,7 @@ from torch import nn
 from torchvision.models import resnet18
 
 
-class MACNN(nn.Module):
+class CNN(nn.Module):
     def __init__(self, n_clses):
         super().__init__()
         self.backbone = nn.Sequential(*list(resnet18(pretrained=True).children())[:-5])
